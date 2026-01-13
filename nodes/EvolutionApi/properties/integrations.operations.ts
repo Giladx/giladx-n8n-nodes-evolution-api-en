@@ -2,7 +2,7 @@ import { INodeProperties } from 'n8n-workflow';
 
 // Opções da integrations-api (Integração)
 export const integrationsOperationsOptions: INodeProperties = {
-	displayName: 'Operação',
+	displayName: 'Operation',
 	name: 'operation',
 	type: 'options',
 	noDataExpression: true,
@@ -16,35 +16,35 @@ export const integrationsOperationsOptions: INodeProperties = {
 			// Set/find Chatwoot
 			name: 'Chatwoot',
 			action: 'Chatwoot',
-			description: 'Define/Busca integração com Chatwoot',
+			description: 'Set or check Chatwoot integration',
 			value: 'chatwoot',
 		},
 		{
 			// Create/find/fetch/Update/Delete/Start/Change Status/Fetch Sessions da Evolution Bot
 			name: 'Evolution Bot',
 			action: 'Evolution bot',
-			description: 'Controla a integração com Evolution Bot',
+			description: 'Manage the Evolution Bot integration',
 			value: 'evolution-bot',
 		},
 		{
 			// Create/find/fetch/Update/Delete/Start/Change Status/Fetch Sessions do Typebot
 			name: 'Typebot',
 			action: 'Typebot',
-			description: 'Controla a integração com Typebot',
+			description: 'Manage the Typebot integration',
 			value: 'typebot',
 		},
 		{
 			// Create/find/fetch/Update/Delete/Start/Change Status/Fetch Sessions da Dify
 			name: 'Dify',
 			action: 'Dify',
-			description: 'Controla a integração com Dify',
+			description: 'Manage the Dify integration',
 			value: 'difyBot',
 		},
 		{
 			// Create/find/fetch/Update/Delete/Start/Change Status/Fetch Sessions da Dify
 			name: 'Flowise',
 			action: 'Flowise',
-			description: 'Controla a integração com Flowise',
+			description: 'Manage the Flowise integration',
 			value: 'flowiseBot',
 		},
 	],

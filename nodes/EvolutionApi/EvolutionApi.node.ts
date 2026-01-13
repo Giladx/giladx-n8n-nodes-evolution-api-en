@@ -55,8 +55,8 @@ export class EvolutionApi implements INodeType {
 		// Se não encontrar a função, retorna um erro
 		if (!fn) {
 			throw new NodeApiError(this.getNode(), {
-				message: 'Operação não suportada.',
-				description: `A função "${operation}" para o recurso "${resource}" não é suportada!`,
+				message: 'Operation not supported.',
+				description: `The function "${operation}" for resource "${resource}" is not supported.`,
 			});
 		}
 

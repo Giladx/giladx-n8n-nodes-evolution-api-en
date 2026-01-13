@@ -4,12 +4,12 @@ import { INodeProperties } from 'n8n-workflow';
 export const instancesFields: INodeProperties[] = [
 	// Campos = Criar Instancia
 	{
-		displayName: 'Nome Da Instância',
+		displayName: 'Instance Name',
 		name: 'instanceName',
 		type: 'string',
 		default: '',
 		required: true,
-		description: 'Digite o nome para a instância',
+		description: 'Enter the instance name',
 		displayOptions: {
 			show: {
 				resource: ['instances-api'],
@@ -18,7 +18,7 @@ export const instancesFields: INodeProperties[] = [
 		},
 	},
 	{
-		displayName: 'Apikey Para Instancia',
+		displayName: 'API Key for Instance',
 		name: 'token',
 		type: 'string',
 		typeOptions: {
@@ -26,7 +26,7 @@ export const instancesFields: INodeProperties[] = [
 		},
 		default: '',
 
-		description: 'Opicional: Digite um Token para a instancia',
+		description: 'Optional: enter a token for the instance',
 		displayOptions: {
 			show: {
 				resource: ['instances-api'],
@@ -35,13 +35,12 @@ export const instancesFields: INodeProperties[] = [
 		},
 	},
 	{
-		displayName: 'Número Do WhatsApp',
+		displayName: 'WhatsApp Number',
 		name: 'number',
 		type: 'string',
 		default: '',
 
-		description:
-			'Opicional: Numero que vai ser conectado na instancia, para receber o Código de pareamento',
+		description: 'Optional: number to connect and receive the pairing code',
 		displayOptions: {
 			show: {
 				resource: ['instances-api'],
@@ -50,12 +49,79 @@ export const instancesFields: INodeProperties[] = [
 		},
 	},
 	{
-		displayName: 'Opções',
+		displayName: 'Options',
 		name: 'options_Create_instance',
 		type: 'collection',
-		placeholder: 'Adicionar Campo',
+		placeholder: 'Add Field',
 		default: {},
 		options: [
+			{
+				displayName: 'Behavior',
+				name: 'instanceSettings',
+				type: 'fixedCollection',
+				typeOptions: {
+					multipleValues: false,
+				},
+				default: { settings: {} },
+				options: [
+					{
+						displayName: 'Instance Behavior',
+						name: 'settings',
+						values: [
+							{
+								displayName: 'Reject Calls',
+								name: 'rejectCall',
+								type: 'boolean',
+								default: false,
+								description: 'Whether to automatically reject incoming calls',
+							},
+							{
+								displayName: 'Message When Rejected',
+								name: 'msgCall',
+								type: 'string',
+								default: '',
+								description: 'Message to send when a call is rejected',
+							},
+							{
+								displayName: 'Ignore Groups',
+								name: 'groupsIgnore',
+								type: 'boolean',
+								default: false,
+								description: 'Whether to ignore messages from groups',
+							},
+							{
+								displayName: 'Always Online',
+								name: 'alwaysOnline',
+								type: 'boolean',
+								default: false,
+								description: 'Whether to keep the status always online',
+							},
+							{
+								displayName: 'Read Messages',
+								name: 'readMessages',
+								type: 'boolean',
+								default: false,
+								description: 'Whether to mark messages as read automatically',
+							},
+							{
+								displayName: 'Read Status',
+								name: 'readStatus',
+								type: 'boolean',
+								default: false,
+								description: 'Whether to allow the API to view contact status updates',
+							},
+							{
+								displayName: 'Sync History',
+								name: 'syncFullHistory',
+								type: 'boolean',
+								default: false,
+								description: 'Whether to sync full message history with the API',
+							},
+						],
+					},
+				],
+				description: 'Instance behavior',
+			},
 			{
 				displayName: 'Chatwoot',
 				name: 'chatwoot',
@@ -66,177 +132,108 @@ export const instancesFields: INodeProperties[] = [
 				default: { settings: {} },
 				options: [
 					{
-						displayName: 'Configurações Do Chatwoot',
+						displayName: 'Chatwoot Settings',
 						name: 'chatwootSettings',
 						values: [
 							{
-								displayName: 'ID Da Conta Do Chatwoot',
+								displayName: 'Chatwoot Account ID',
 								name: 'chatwootAccountId',
 								type: 'string',
 								default: '',
-								description: 'Digite o ID da conta do Chatwoot',
+								description: 'Enter the Chatwoot account ID',
 							},
 							{
-								displayName: 'Token De Admin Do Chatwoot',
+								displayName: 'Chatwoot Admin Token',
 								name: 'chatwootToken',
 								type: 'string',
 								typeOptions: {
 									password: true,
 								},
 								default: '',
-								description: 'Digite o token de admin do Chatwoot',
+								description: 'Enter the Chatwoot admin token',
 							},
 							{
-								displayName: 'Link Do Chatwoot',
+								displayName: 'Chatwoot URL',
 								name: 'chatwootUrl',
 								type: 'string',
 								default: '',
-								description: 'Digite o link do Chatwoot',
+								description: 'Enter the Chatwoot URL',
 							},
 							{
-								displayName: 'Assinatura Do Agente Do Chatwoot',
+								displayName: 'Chatwoot Agent Signature',
 								name: 'chatwootSignMsg',
 								type: 'boolean',
 								default: false,
-								description: 'Whether to enable or disable the Chatwoot agent signature',
+								description: 'Whether to add the agent signature in Chatwoot',
 							},
 							{
-								displayName: 'Reabrir Mensagens No Chatwoot',
+								displayName: 'Reopen Messages in Chatwoot',
 								name: 'chatwootReopenConversation',
 								type: 'boolean',
 								default: false,
-								description: 'Whether to enable or disable reopening messages in Chatwoot',
+								description: 'Whether to reopen conversations in Chatwoot',
 							},
 							{
-								displayName: 'Iniciar Conversas Como Pendentes No Chatwoot',
+								displayName: 'Start Conversations as Pending',
 								name: 'chatwootConversationPending',
 								type: 'boolean',
 								default: false,
 								description: 'Whether to start conversations as pending in Chatwoot',
 							},
 							{
-								displayName: 'Importar Contatos Para O Chatwoot',
+								displayName: 'Import Contacts to Chatwoot',
 								name: 'chatwootImportContacts',
 								type: 'boolean',
 								default: false,
 								description: 'Whether to import contacts to Chatwoot',
 							},
 							{
-								displayName: 'Nome Da Inbox Do Chatwoot',
+								displayName: 'Chatwoot Inbox Name',
 								name: 'chatwootNameInbox',
 								type: 'string',
 								default: '',
-								description: 'Digite o nome da Inbox do Chatwoot',
+								description: 'Enter the Chatwoot inbox name',
 							},
 							{
-								displayName: 'Mesclar Contatos Brasileiros No Chatwoot',
+								displayName: 'Merge Brazilian Contacts',
 								name: 'chatwootMergeBrazilContacts',
 								type: 'boolean',
 								default: false,
 								description: 'Whether to merge Brazilian contacts in Chatwoot',
 							},
 							{
-								displayName: 'Importar Mensagens Para O Chatwoot',
+								displayName: 'Import Messages to Chatwoot',
 								name: 'chatwootImportMessages',
 								type: 'boolean',
 								default: false,
 								description: 'Whether to import messages to Chatwoot',
 							},
 							{
-								displayName: 'Importar Mensagens De Quantos Dias Para O Chatwoot',
+								displayName: 'Import Messages (Days)',
 								name: 'chatwootDaysLimitImportMessages',
 								type: 'number',
 								default: 0,
-								description:
-									'Digite o número de dias para limitar a importação de mensagens para o Chatwoot',
+								description: 'Optional: number of days of messages to import into Chatwoot',
 							},
 							{
-								displayName: 'Nome Do Contato De QRCode No Chatwoot',
+								displayName: 'Chatwoot QR Code Contact Name',
 								name: 'chatwootOrganization',
 								type: 'string',
 								default: '',
-								description: 'Digite o nome do contato de QRCode no Chatwoot',
+								description: 'Enter the QR code contact name in Chatwoot',
 							},
 							{
-								displayName: 'Url Do Logo Para O Contato No Chatwoot',
+								displayName: 'Chatwoot Contact Logo URL',
 								name: 'chatwootLogo',
 								type: 'string',
 								default:
 									'https://github.com/user-attachments/assets/4d1e9cd6-377a-4383-820a-9a97e6cfbb63',
-								description: 'Digite a URL do logo para o contato no Chatwoot',
+								description: 'Enter the logo URL for the Chatwoot contact',
 							},
 						],
 					},
 				],
-				description: 'Configurações do Chatwoot',
-			},
-			{
-				displayName: 'Comportamento',
-				name: 'instanceSettings',
-				type: 'fixedCollection',
-				typeOptions: {
-					multipleValues: false,
-				},
-				default: { settings: {} },
-				options: [
-					{
-						displayName: 'Comportamento Da Instancia',
-						name: 'settings',
-						values: [
-							{
-								displayName: 'Rejeitar Ligações',
-								name: 'rejectCall',
-								type: 'boolean',
-								default: false,
-								description: 'Whether to automatically reject incoming calls',
-							},
-							{
-								displayName: 'Mensagem Ao Rejeitar',
-								name: 'msgCall',
-								type: 'string',
-								default: '',
-								description:
-									'Whether to send a message after rejecting a call, and if so, what message',
-							},
-							{
-								displayName: 'Ignorar Grupos',
-								name: 'groupsIgnore',
-								type: 'boolean',
-								default: false,
-								description: 'Whether to ignore messages from groups',
-							},
-							{
-								displayName: 'Sempre Online',
-								name: 'alwaysOnline',
-								type: 'boolean',
-								default: false,
-								description: 'Whether to keep the status always set to Online',
-							},
-							{
-								displayName: 'Ler Mensagens',
-								name: 'readMessages',
-								type: 'boolean',
-								default: false,
-								description: 'Whether to automatically mark messages as read',
-							},
-							{
-								displayName: 'Ler Status',
-								name: 'readStatus',
-								type: 'boolean',
-								default: false,
-								description: 'Whether to allow the API to view the Status of added contacts',
-							},
-							{
-								displayName: 'Sincronizar Histórico',
-								name: 'syncFullHistory',
-								type: 'boolean',
-								default: false,
-								description: 'Whether to synchronize the full message history with the API',
-							},
-						],
-					},
-				],
-				description: 'Comportamento da instância',
+				description: 'Chatwoot settings',
 			},
 			{
 				displayName: 'Proxy',
@@ -248,25 +245,25 @@ export const instancesFields: INodeProperties[] = [
 				default: { settings: {} },
 				options: [
 					{
-						displayName: 'Configurações Do Proxy',
+						displayName: 'Proxy Settings',
 						name: 'proxySettings',
 						values: [
 							{
-								displayName: 'Host Do Proxy',
+								displayName: 'Proxy Host',
 								name: 'proxyHost',
 								type: 'string',
 								default: '',
-								description: 'Digite o host do proxy',
+								description: 'Enter the proxy host',
 							},
 							{
-								displayName: 'Porta Do Proxy',
+								displayName: 'Proxy Port',
 								name: 'proxyPort',
 								type: 'string',
 								default: '1234',
-								description: 'Digite a porta do proxy',
+								description: 'Enter the proxy port',
 							},
 							{
-								displayName: 'Protocolo Do Proxy',
+								displayName: 'Proxy Protocol',
 								name: 'proxyProtocol',
 								type: 'options',
 								options: [
@@ -280,29 +277,29 @@ export const instancesFields: INodeProperties[] = [
 									},
 								],
 								default: 'http',
-								description: 'Selecione o protocolo do proxy',
+								description: 'Choose the proxy protocol',
 							},
 							{
-								displayName: 'Usuário Do Proxy',
+								displayName: 'Proxy Username',
 								name: 'proxyUsername',
 								type: 'string',
 								default: '',
-								description: 'Digite o usuário do proxy',
+								description: 'Enter the proxy username',
 							},
 							{
-								displayName: 'Senha Do Proxy',
+								displayName: 'Proxy Password',
 								name: 'proxyPassword',
 								type: 'string',
 								typeOptions: {
 									password: true,
 								},
 								default: '',
-								description: 'Digite a senha do proxy',
+								description: 'Enter the proxy password',
 							},
 						],
 					},
 				],
-				description: 'Configurações do proxy',
+				description: 'Proxy settings',
 			},
 			{
 				displayName: 'RabbitMQ',
@@ -314,18 +311,18 @@ export const instancesFields: INodeProperties[] = [
 				default: { settings: {} },
 				options: [
 					{
-						displayName: 'Configurações Do RabbitMQ',
+						displayName: 'RabbitMQ Settings',
 						name: 'rabbitmqSettings',
 						values: [
 							{
-								displayName: 'Ativa Ou Desativa O RabbitMQ',
+								displayName: 'Enable RabbitMQ',
 								name: 'rabbitmqEnabled',
 								type: 'boolean',
 								default: false,
-								description: 'Whether to send media data in base64 format in the RabbitMQ', // Atualizado
+								description: 'Whether to turn RabbitMQ on or off',
 							},
 							{
-								displayName: 'Eventos',
+								displayName: 'Events',
 								name: 'rabbitmqEvents',
 								type: 'multiOptions',
 								default: [], // Adicionado para resolver o erro
@@ -427,7 +424,7 @@ export const instancesFields: INodeProperties[] = [
 						],
 					},
 				],
-				description: 'Os eventos a serem monitorados',
+				description: 'Events to monitor',
 			},
 			{
 				displayName: 'Webhook',
@@ -439,33 +436,32 @@ export const instancesFields: INodeProperties[] = [
 				default: { settings: {} },
 				options: [
 					{
-						displayName: 'Configurações Do Webhook',
+						displayName: 'Webhook Settings',
 						name: 'webhookSettings',
 						values: [
 							{
-								displayName: 'Url Do Webhook',
+								displayName: 'Webhook URL',
 								name: 'webhookUrl',
 								type: 'string',
 								default: '',
-								description: 'Digite a URL que vai receber os eventos do Webhook',
+								description: 'Enter the URL that will receive webhook events',
 							},
 							{
-								displayName: 'Webhook Por Eventos',
+								displayName: 'Webhook by Event',
 								name: 'webhookByEvents',
 								type: 'boolean',
 								default: false,
-								description:
-									'Whether to create a route for each event by appending the event name to the end of the URL', // Atualizado
+								description: 'Whether to create a route per event by appending the event name to the URL', // Atualizado
 							},
 							{
-								displayName: 'Base64 No Webhook',
+								displayName: 'Include Base64 Media',
 								name: 'webhookBase64',
 								type: 'boolean',
 								default: false,
-								description: 'Whether to send media data in base64 format in the webhook', // Atualizado
+								description: 'Whether to send media as base64 in the webhook', // Atualizado
 							},
 							{
-								displayName: 'Eventos',
+								displayName: 'Events',
 								name: 'webhookEvents',
 								type: 'multiOptions',
 								default: [], // Adicionado para resolver o erro
@@ -567,7 +563,7 @@ export const instancesFields: INodeProperties[] = [
 						],
 					},
 				],
-				description: 'Os eventos a serem monitorados',
+				description: 'Events to monitor',
 			},
 		],
 		displayOptions: {
@@ -580,12 +576,12 @@ export const instancesFields: INodeProperties[] = [
 
 	// Campos = Conectar Instância
 	{
-		displayName: 'Nome Da Instância',
+		displayName: 'Instance Name',
 		name: 'instanceName',
 		type: 'string',
 		default: '',
 		required: true,
-		description: 'Digite o nome da instância que deseja pesquisar',
+		description: 'Enter the instance name to search',
 		displayOptions: {
 			show: {
 				resource: ['instances-api'],
@@ -596,12 +592,12 @@ export const instancesFields: INodeProperties[] = [
 
 	// Campos = Buscar Instancia
 	{
-		displayName: 'Nome Da Instância',
+		displayName: 'Instance Name',
 		name: 'instanceName',
 		type: 'string',
 		default: '',
 
-		description: 'Digite o nome da instância que deseja pesquisar',
+		description: 'Enter the instance name to search',
 		displayOptions: {
 			show: {
 				resource: ['instances-api'],
@@ -612,12 +608,12 @@ export const instancesFields: INodeProperties[] = [
 
 	// Campos = Definir Comportamento
 	{
-		displayName: 'Nome Da Instância',
+		displayName: 'Instance Name',
 		name: 'instanceName',
 		type: 'string',
 		default: '',
 		required: true,
-		description: 'Digite o nome para a instância',
+		description: 'Enter the instance name',
 		displayOptions: {
 			show: {
 				resource: ['instances-api'],
@@ -626,11 +622,11 @@ export const instancesFields: INodeProperties[] = [
 		},
 	},
 	{
-		displayName: 'Rejeitar Chamadas',
+		displayName: 'Reject Calls',
 		name: 'rejectCall',
 		type: 'boolean',
 		default: false,
-		description: 'Whether to reject calls or not',
+		description: 'Whether to reject incoming calls',
 		displayOptions: {
 			show: {
 				resource: ['instances-api'],
@@ -639,12 +635,12 @@ export const instancesFields: INodeProperties[] = [
 		},
 	},
 	{
-		displayName: 'Mensagem De Chamadas',
+		displayName: 'Call Reject Message',
 		name: 'msgCall',
 		type: 'string',
-		default: 'Não aceitamos ligações telefônicas.',
+		default: 'We do not accept calls.',
 
-		description: 'Mensagem a ser enviada se as chamadas forem rejeitadas',
+		description: 'Message to send when calls are rejected',
 		displayOptions: {
 			show: {
 				resource: ['instances-api'],
@@ -653,11 +649,11 @@ export const instancesFields: INodeProperties[] = [
 		},
 	},
 	{
-		displayName: 'Ignorar Grupos',
+		displayName: 'Ignore Groups',
 		name: 'groupsIgnore',
 		type: 'boolean',
 		default: false,
-		description: 'Whether to mention them all',
+		description: 'Whether to ignore messages from groups',
 		displayOptions: {
 			show: {
 				resource: ['instances-api'],
@@ -666,11 +662,11 @@ export const instancesFields: INodeProperties[] = [
 		},
 	},
 	{
-		displayName: 'Sempre Online',
+		displayName: 'Always Online',
 		name: 'alwaysOnline',
 		type: 'boolean',
 		default: false,
-		description: 'Whether the instance should always be online or not',
+		description: 'Whether to keep the instance online',
 		displayOptions: {
 			show: {
 				resource: ['instances-api'],
@@ -679,11 +675,11 @@ export const instancesFields: INodeProperties[] = [
 		},
 	},
 	{
-		displayName: 'Ler Mensagens',
+		displayName: 'Read Messages',
 		name: 'readMessages',
 		type: 'boolean',
 		default: false,
-		description: 'Whether to mention them all',
+		description: 'Whether to mark messages as read automatically',
 		displayOptions: {
 			show: {
 				resource: ['instances-api'],
@@ -692,11 +688,11 @@ export const instancesFields: INodeProperties[] = [
 		},
 	},
 	{
-		displayName: 'Sincronizar Histórico Completo',
+		displayName: 'Sync Full History',
 		name: 'syncFullHistory',
 		type: 'boolean',
 		default: false,
-		description: 'Whether to mention them all history or not',
+		description: 'Whether to sync full message history',
 		displayOptions: {
 			show: {
 				resource: ['instances-api'],
@@ -705,11 +701,11 @@ export const instancesFields: INodeProperties[] = [
 		},
 	},
 	{
-		displayName: 'Ler Status',
+		displayName: 'Read Status',
 		name: 'readStatus',
 		type: 'boolean',
 		default: false,
-		description: 'Whether to mention them all',
+		description: 'Whether to allow reading status updates',
 		displayOptions: {
 			show: {
 				resource: ['instances-api'],
@@ -720,12 +716,12 @@ export const instancesFields: INodeProperties[] = [
 
 	// Campos = Definir presença
 	{
-		displayName: 'Nome Da Instância',
+		displayName: 'Instance Name',
 		name: 'instanceName',
 		type: 'string',
 		default: '',
 		required: true,
-		description: 'Digite o nome da instância',
+		description: 'Enter the instance name',
 		displayOptions: {
 			show: {
 				resource: ['instances-api'],
@@ -734,22 +730,22 @@ export const instancesFields: INodeProperties[] = [
 		},
 	},
 	{
-		displayName: 'Presença',
+		displayName: 'Presence',
 		name: 'presence',
 		type: 'options',
 		options: [
 			{
-				name: 'Disponível',
+				name: 'Available',
 				value: 'available',
 			},
 			{
-				name: 'Indisponível',
+				name: 'Unavailable',
 				value: 'unavailable',
 			},
 		],
 		default: 'available',
 		required: true,
-		description: 'Status de presença da instância',
+		description: 'Instance presence status',
 		displayOptions: {
 			show: {
 				resource: ['instances-api'],
@@ -760,12 +756,12 @@ export const instancesFields: INodeProperties[] = [
 
 	// Campos = Proxy
 	{
-		displayName: 'Nome Da Instancia',
+		displayName: 'Instance Name',
 		name: 'instanceName',
 		type: 'string',
 		default: '',
 		required: true,
-		description: 'Digite o nome da instância que vai enviar a mensagem',
+		description: 'Enter the instance name',
 		displayOptions: {
 			show: {
 				resource: ['instances-api'],
@@ -775,21 +771,21 @@ export const instancesFields: INodeProperties[] = [
 	},
 
 	{
-		displayName: 'O Que Deseja Fazer',
+		displayName: 'What Do You Want to Do?',
 		name: 'resourceForProxy',
 		type: 'options',
 		options: [
 			{
-				name: 'Definir Proxy',
+				name: 'Set Proxy',
 				value: 'setProxy',
 			},
 			{
-				name: 'Verificar Proxy',
+				name: 'Check Proxy',
 				value: 'findProxy',
 			},
 		],
 		default: 'setProxy',
-		description: 'Escolha entre ativar/desativar proxy ou verificar o proxy',
+		description: 'Choose to set or check the proxy',
 		displayOptions: {
 			show: {
 				resource: ['instances-api'],
@@ -798,11 +794,11 @@ export const instancesFields: INodeProperties[] = [
 		},
 	},
 	{
-		displayName: 'Ativar Proxy',
+		displayName: 'Enable Proxy',
 		name: 'enabled',
 		type: 'boolean',
 		default: true,
-		description: 'Whether to enable or disable integration with proxy',
+		description: 'Whether to turn proxy on or off',
 		displayOptions: {
 			show: {
 				resource: ['instances-api'],
@@ -812,7 +808,7 @@ export const instancesFields: INodeProperties[] = [
 		},
 	},
 	{
-		displayName: 'Protocolo Do Proxy',
+		displayName: 'Proxy Protocol',
 		name: 'proxyProtocol',
 		displayOptions: {
 			show: {
@@ -833,15 +829,15 @@ export const instancesFields: INodeProperties[] = [
 			},
 		],
 		default: 'http',
-		description: 'Selecione o protocolo do proxy',
+		description: 'Choose the proxy protocol',
 	},
 	{
-		displayName: 'Host Do Proxy',
+		displayName: 'Proxy Host',
 		name: 'proxyHost',
 		type: 'string',
 		default: '',
 		required: true,
-		description: 'Digite o host do proxy',
+		description: 'Enter the proxy host',
 		displayOptions: {
 			show: {
 				resource: ['instances-api'],
@@ -851,12 +847,12 @@ export const instancesFields: INodeProperties[] = [
 		},
 	},
 	{
-		displayName: 'Porta Do Proxy',
+		displayName: 'Proxy Port',
 		name: 'proxyPort',
 		type: 'string',
 		default: '1234',
 		required: true,
-		description: 'Digite a porta do proxy',
+		description: 'Enter the proxy port',
 		displayOptions: {
 			show: {
 				resource: ['instances-api'],
@@ -866,12 +862,12 @@ export const instancesFields: INodeProperties[] = [
 		},
 	},
 	{
-		displayName: 'Usuário Do Proxy',
+		displayName: 'Proxy Username',
 		name: 'proxyUsername',
 		type: 'string',
 		default: '',
 		required: true,
-		description: 'Digite o usuário do proxy',
+		description: 'Enter the proxy username',
 		displayOptions: {
 			show: {
 				resource: ['instances-api'],
@@ -881,7 +877,7 @@ export const instancesFields: INodeProperties[] = [
 		},
 	},
 	{
-		displayName: 'Senha Do Proxy',
+		displayName: 'Proxy Password',
 		name: 'proxyPassword',
 		type: 'string',
 		required: true,
@@ -889,7 +885,7 @@ export const instancesFields: INodeProperties[] = [
 			password: true,
 		},
 		default: '',
-		description: 'Digite a senha do proxy',
+		description: 'Enter the proxy password',
 		displayOptions: {
 			show: {
 				resource: ['instances-api'],
@@ -901,12 +897,12 @@ export const instancesFields: INodeProperties[] = [
 
 	// Campos = Reiniciar instancia
 	{
-		displayName: 'Nome Da Insticância',
+		displayName: 'Instance Name',
 		name: 'instanceName',
 		type: 'string',
 		default: '',
 		required: true,
-		description: 'Digite o nome da instância que deseja pesquisar',
+		description: 'Enter the instance name',
 		displayOptions: {
 			show: {
 				resource: ['instances-api'],
@@ -917,12 +913,12 @@ export const instancesFields: INodeProperties[] = [
 
 	// Campos = Desconectar instancia
 	{
-		displayName: 'Nome Da Insticância',
+		displayName: 'Instance Name',
 		name: 'instanceName',
 		type: 'string',
 		default: '',
 		required: true,
-		description: 'Digite o nome da instância que deseja pesquisar',
+		description: 'Enter the instance name',
 		displayOptions: {
 			show: {
 				resource: ['instances-api'],
@@ -933,12 +929,12 @@ export const instancesFields: INodeProperties[] = [
 
 	// Campos = Deletar instancia
 	{
-		displayName: 'Nome Da Instancia',
+		displayName: 'Instance Name',
 		name: 'instanceName',
 		type: 'string',
 		default: '',
 		required: true,
-		description: 'Digite o nome da instância que vai ser deletada',
+		description: 'Enter the instance name to delete',
 		displayOptions: {
 			show: {
 				resource: ['instances-api'],

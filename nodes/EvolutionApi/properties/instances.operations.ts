@@ -2,7 +2,7 @@ import { INodeProperties } from 'n8n-workflow';
 
 // Opções da instances-api (Instancias)
 export const instancesOperationsOptions: INodeProperties = {
-	displayName: 'Operação',
+	displayName: 'Operation',
 	name: 'operation',
 	type: 'options',
 	noDataExpression: true,
@@ -17,80 +17,80 @@ export const instancesOperationsOptions: INodeProperties = {
 		// Opção = Criar instancia
 		{
 			// Create Instance Basic
-			name: 'Criar Instancia',
-			action: 'Criar instancia',
-			description: 'Cria uma nova Instancia',
+			name: 'Create Instance',
+			action: 'Create instance',
+			description: 'Create a new instance',
 			value: 'instance-basic',
 		},
 
 		// Opção = Conectar Instância
 		{
 			// Instance Connect
-			name: 'Conectar Instancia',
-			action: 'Conectar instancia',
-			description: 'Gera a conexão de uma Instancia (QR ou Base64)',
+			name: 'Connect Instance',
+			action: 'Connect instance',
+			description: 'Create a connection for an instance (QR or Base64)',
 			value: 'instance-connect',
 		},
 
 		// Opção = Buscar Instancia
 		{
 			// Fetch Instances
-			name: 'Buscar Instancia',
-			action: 'Buscar instancia',
-			description: 'Busca e lista as Instancias criadas',
+			name: 'Fetch Instances',
+			action: 'Fetch instances',
+			description: 'Fetch and list created instances',
 			value: 'fetch-instances',
 		},
 
 		// Opção = Definir Comportamento da instancia
 		{
-			name: 'Definir Comportamento',
-			action: 'Definir comportamento',
-			description: 'Define o comportamento da instancia',
+			name: 'Set Behavior',
+			action: 'Set behavior',
+			description: 'Set the instance behavior',
 			value: 'instance-settings',
 		},
 
 		// Opção = Definir presença
 		{
 			// Set Presence
-			name: 'Definir Presença',
-			action: 'Definir presen a',
-			description: 'Define a presença na instancia',
+			name: 'Set Presence',
+			action: 'Set presence',
+			description: 'Set presence for the instance',
 			value: 'set-presence',
 		},
 
 		// Opção = Definit Proxy
 		{
 			// Set/find Proxy
-			name: 'Definir/Buscar Proxy',
+			name: 'Set/Check Proxy',
 			action: 'Proxy',
-			description: 'Define um Proxy na instancia',
+			description: 'Set a proxy on the instance',
 			value: 'set-proxy',
 		},
 
 		// Opção = Reiniciar instancia
 		{
 			// Restart Instance
-			name: 'Reiniciar Instancia',
-			action: 'Reiniciar instancia',
-			description: 'Reinicia o socket da Instancia',
+			name: 'Restart Instance',
+			action: 'Restart instance',
+			description: 'Restart the instance socket',
 			value: 'restart-instance',
 		},
 
 		// Opção = Desconectar instancia
 		{
 			// Logout Instance
-			name: 'Desconectar Instancia',
-			action: 'Desconectar instancia',
-			description: 'Desconecta o WhatsApp da Instancia',
+			name: 'Disconnect Instance',
+			action: 'Disconnect instance',
+			description: 'Disconnect WhatsApp from the instance',
 			value: 'logout-instance',
 		},
 
 		// Opção = Deletar instancia
 		{
 			// Delete Instance
-			name: 'Deletar Instancia',
-			action: 'Deletar instancia',
-			description: 'Deleta uma Instancia',
+			name: 'Delete Instance',
+			action: 'Delete instance',
+			description: 'Delete an instance',
 			value: 'delete-instance',
 		},
 	],

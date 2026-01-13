@@ -14,21 +14,21 @@ import { chatOperations } from './chat.operations';
 import { profileFields } from './profile.fields';
 import { profileOperationsOptions } from './profile.operations';
 const resourcesOptions: INodeProperties = {
-	displayName: 'Recurso',
+	displayName: 'Resource',
 	name: 'resource',
 	type: 'options',
 	noDataExpression: true,
 	options: [
 		{
-			name: 'Instancia',
+			name: 'Instance',
 			value: 'instances-api',
 		},
 		{
-			name: 'Mensagem',
+			name: 'Message',
 			value: 'messages-api',
 		},
 		{
-			name: 'Grupo',
+			name: 'Group',
 			value: 'groups-api',
 		},
 		{
@@ -36,15 +36,15 @@ const resourcesOptions: INodeProperties = {
 			value: 'chat-api',
 		},
 		{
-			name: 'Perfil',
+			name: 'Profile',
 			value: 'profile-api',
 		},
 		{
-			name: 'Evento',
+			name: 'Event',
 			value: 'events-api',
 		},
 		{
-			name: 'Integração',
+			name: 'Integration',
 			value: 'integrations-api',
 		},
 	],

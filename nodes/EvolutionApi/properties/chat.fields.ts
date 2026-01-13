@@ -3,12 +3,12 @@ import { INodeProperties, NodePropertyTypes } from 'n8n-workflow';
 export const chatFields: INodeProperties[] = [
 	// Campos comuns para todas as operações
 	{
-		displayName: 'Nome Da Instância',
+		displayName: 'Instance Name',
 		name: 'instanceName',
 		type: 'string' as NodePropertyTypes,
 		default: '',
 		required: true,
-		description: 'Digite o nome da instância',
+		description: 'Enter the instance name',
 		displayOptions: {
 			show: {
 				resource: ['chat-api'],
@@ -18,12 +18,12 @@ export const chatFields: INodeProperties[] = [
 
 	// Campos para verificar número
 	{
-		displayName: 'Números',
+		displayName: 'Numbers',
 		name: 'numbers',
 		type: 'string' as NodePropertyTypes,
 		default: '',
 		required: true,
-		description: 'Lista de números para verificar (separados por vírgula)',
+		description: 'List of numbers to check (comma-separated)',
 		displayOptions: {
 			show: {
 				resource: ['chat-api'],
@@ -34,12 +34,12 @@ export const chatFields: INodeProperties[] = [
 
 	// Campos para ler mensagens
 	{
-		displayName: 'Contato',
+		displayName: 'Contact',
 		name: 'remoteJid',
 		type: 'string' as NodePropertyTypes,
 		default: '',
 		required: true,
-		description: 'Número do contato',
+		description: 'Contact number',
 		displayOptions: {
 			show: {
 				resource: ['chat-api'],
@@ -48,7 +48,7 @@ export const chatFields: INodeProperties[] = [
 		},
 	},
 	{
-		displayName: 'ID Da Mensagem',
+		displayName: 'Message ID',
 		name: 'messageId',
 		type: 'string' as NodePropertyTypes,
 		default: '',
@@ -62,12 +62,12 @@ export const chatFields: INodeProperties[] = [
 		},
 	},
 	{
-		displayName: 'Mensagem É Minha',
+		displayName: 'Sent By Me',
 		name: 'fromMe',
 		type: 'boolean' as NodePropertyTypes,
 		default: false,
 		required: true,
-		description: 'Se a mensagem foi enviada pela instância',
+		description: 'Whether the message was sent by this instance',
 		displayOptions: {
 			show: {
 				resource: ['chat-api'],
@@ -78,12 +78,12 @@ export const chatFields: INodeProperties[] = [
 
 	// Campos para gerenciar arquivo
 	{
-		displayName: 'Contato',
+		displayName: 'Contact',
 		name: 'chat',
 		type: 'string' as NodePropertyTypes,
 		default: '',
 		required: true,
-		description: 'Número do contato',
+		description: 'Contact number',
 		displayOptions: {
 			show: {
 				resource: ['chat-api'],
@@ -92,22 +92,22 @@ export const chatFields: INodeProperties[] = [
 		},
 	},
 	{
-		displayName: 'Ação',
+		displayName: 'Action',
 		name: 'archive',
 		type: 'options' as NodePropertyTypes,
 		options: [
 			{
-				name: 'Arquivar',
+				name: 'Archive',
 				value: true,
 			},
 			{
-				name: 'Desarquivar',
+				name: 'Unarchive',
 				value: false,
 			},
 		],
 		default: true,
 		required: true,
-		description: 'Escolha se deseja arquivar ou desarquivar a conversa',
+		description: 'Choose to archive or unarchive the chat',
 		displayOptions: {
 			show: {
 				resource: ['chat-api'],
@@ -116,12 +116,12 @@ export const chatFields: INodeProperties[] = [
 		},
 	},
 	{
-		displayName: 'ID Da Mensagem',
+		displayName: 'Message ID',
 		name: 'messageId',
 		type: 'string' as NodePropertyTypes,
 		default: '',
 		required: true,
-		description: 'ID da última mensagem',
+		description: 'Last message ID',
 		displayOptions: {
 			show: {
 				resource: ['chat-api'],
@@ -130,12 +130,12 @@ export const chatFields: INodeProperties[] = [
 		},
 	},
 	{
-		displayName: 'Mensagem É Minha',
+		displayName: 'Sent By Me',
 		name: 'fromMe',
 		type: 'boolean' as NodePropertyTypes,
 		default: false,
 		required: true,
-		description: 'Se a mensagem foi enviada pela instância',
+		description: 'Whether the message was sent by this instance',
 		displayOptions: {
 			show: {
 				resource: ['chat-api'],
@@ -146,12 +146,12 @@ export const chatFields: INodeProperties[] = [
 
 	// Campos para marcar como não lido
 	{
-		displayName: 'Contato',
+		displayName: 'Contact',
 		name: 'chat',
 		type: 'string' as NodePropertyTypes,
 		default: '',
 		required: true,
-		description: 'Número do contato',
+		description: 'Contact number',
 		displayOptions: {
 			show: {
 				resource: ['chat-api'],
@@ -160,12 +160,12 @@ export const chatFields: INodeProperties[] = [
 		},
 	},
 	{
-		displayName: 'ID Da Mensagem',
+		displayName: 'Message ID',
 		name: 'messageId',
 		type: 'string' as NodePropertyTypes,
 		default: '',
 		required: true,
-		description: 'ID da última mensagem',
+		description: 'Last message ID',
 		displayOptions: {
 			show: {
 				resource: ['chat-api'],
@@ -174,12 +174,12 @@ export const chatFields: INodeProperties[] = [
 		},
 	},
 	{
-		displayName: 'Mensagem É Minha',
+		displayName: 'Sent By Me',
 		name: 'fromMe',
 		type: 'boolean' as NodePropertyTypes,
 		default: false,
 		required: true,
-		description: 'Se a mensagem foi enviada pela instância',
+		description: 'Whether the message was sent by this instance',
 		displayOptions: {
 			show: {
 				resource: ['chat-api'],
@@ -190,12 +190,12 @@ export const chatFields: INodeProperties[] = [
 
 	// Campos para deletar mensagem
 	{
-		displayName: 'Contato',
+		displayName: 'Contact',
 		name: 'remoteJid',
 		type: 'string' as NodePropertyTypes,
 		default: '',
 		required: true,
-		description: 'Número do contato',
+		description: 'Contact number',
 		displayOptions: {
 			show: {
 				resource: ['chat-api'],
@@ -204,12 +204,12 @@ export const chatFields: INodeProperties[] = [
 		},
 	},
 	{
-		displayName: 'ID Da Mensagem',
+		displayName: 'Message ID',
 		name: 'messageId',
 		type: 'string' as NodePropertyTypes,
 		default: '',
 		required: true,
-		description: 'ID da mensagem que será deletada',
+		description: 'Message ID to delete',
 		displayOptions: {
 			show: {
 				resource: ['chat-api'],
@@ -218,12 +218,12 @@ export const chatFields: INodeProperties[] = [
 		},
 	},
 	{
-		displayName: 'Mensagem É Minha',
+		displayName: 'Sent By Me',
 		name: 'fromMe',
 		type: 'boolean' as NodePropertyTypes,
 		default: false,
 		required: true,
-		description: 'Se a mensagem foi enviada pela instância',
+		description: 'Whether the message was sent by this instance',
 		displayOptions: {
 			show: {
 				resource: ['chat-api'],
@@ -232,12 +232,12 @@ export const chatFields: INodeProperties[] = [
 		},
 	},
 	{
-		displayName: 'Número Do Participante',
+		displayName: 'Participant Number',
 		name: 'participant',
 		type: 'string',
 		default: '',
 		required: true,
-		description: 'Número do participante que enviou a mensagem',
+		description: 'Number of the participant who sent the message',
 		displayOptions: {
 			show: {
 				resource: ['chat-api'],
@@ -249,12 +249,12 @@ export const chatFields: INodeProperties[] = [
 
 	// Campos para buscar foto do perfil
 	{
-		displayName: 'Contato',
+		displayName: 'Contact',
 		name: 'number',
 		type: 'string' as NodePropertyTypes,
 		default: '',
 		required: true,
-		description: 'Número do contato (ex: 5511999999999)',
+		description: 'Contact number (e.g., 5511999999999)',
 		displayOptions: {
 			show: {
 				resource: ['chat-api'],
@@ -265,12 +265,12 @@ export const chatFields: INodeProperties[] = [
 
 	// Campos para obter mídia em Base64
 	{
-		displayName: 'ID Da Mensagem',
+		displayName: 'Message ID',
 		name: 'messageId',
 		type: 'string' as NodePropertyTypes,
 		default: '',
 		required: true,
-		description: 'ID da mensagem que contém a mídia',
+		description: 'Message ID that contains the media',
 		displayOptions: {
 			show: {
 				resource: ['chat-api'],
@@ -279,12 +279,12 @@ export const chatFields: INodeProperties[] = [
 		},
 	},
 	{
-		displayName: 'Converter Para MP4',
+		displayName: 'Convert to MP4',
 		name: 'convertToMp4',
 		type: 'boolean' as NodePropertyTypes,
 		default: false,
 		required: true,
-		description: 'Se deve converter o vídeo para formato MP4',
+		description: 'Whether to convert the video to MP4 format',
 		displayOptions: {
 			show: {
 				resource: ['chat-api'],
@@ -295,12 +295,12 @@ export const chatFields: INodeProperties[] = [
 
 	// Campos para editar mensagem
 	{
-		displayName: 'Contato',
+		displayName: 'Contact',
 		name: 'remoteJid',
 		type: 'string' as NodePropertyTypes,
 		default: '',
 		required: true,
-		description: 'Número do contato',
+		description: 'Contact number',
 		displayOptions: {
 			show: {
 				resource: ['chat-api'],
@@ -309,12 +309,12 @@ export const chatFields: INodeProperties[] = [
 		},
 	},
 	{
-		displayName: 'ID Da Mensagem',
+		displayName: 'Message ID',
 		name: 'messageId',
 		type: 'string' as NodePropertyTypes,
 		default: '',
 		required: true,
-		description: 'ID da mensagem que será editada',
+		description: 'Message ID to edit',
 		displayOptions: {
 			show: {
 				resource: ['chat-api'],
@@ -323,12 +323,12 @@ export const chatFields: INodeProperties[] = [
 		},
 	},
 	{
-		displayName: 'Nova Mensagem',
+		displayName: 'New Message',
 		name: 'text',
 		type: 'string' as NodePropertyTypes,
 		default: '',
 		required: true,
-		description: 'Novo texto da mensagem',
+		description: 'New message text',
 		displayOptions: {
 			show: {
 				resource: ['chat-api'],
@@ -339,12 +339,12 @@ export const chatFields: INodeProperties[] = [
 
 	// Campos para enviar presença
 	{
-		displayName: 'Contato',
+		displayName: 'Contact',
 		name: 'remoteJid',
 		type: 'string' as NodePropertyTypes,
 		default: '',
 		required: true,
-		description: 'Número do contato',
+		description: 'Contact number',
 		displayOptions: {
 			show: {
 				resource: ['chat-api'],
@@ -353,22 +353,22 @@ export const chatFields: INodeProperties[] = [
 		},
 	},
 	{
-		displayName: 'Presença',
+		displayName: 'Presence',
 		name: 'presence',
 		type: 'options',
 		options: [
 			{
-				name: 'Escrevendo...',
+				name: 'Typing...',
 				value: 'composing',
 			},
 			{
-				name: 'Gravando...',
+				name: 'Recording...',
 				value: 'recording',
 			},
 		],
 		default: 'composing',
 		required: true,
-		description: 'Tipo de presença a ser enviada',
+		description: 'Presence type to send',
 		displayOptions: {
 			show: {
 				resource: ['chat-api'],
@@ -382,7 +382,7 @@ export const chatFields: INodeProperties[] = [
 		type: 'number' as NodePropertyTypes,
 		default: 1200,
 		required: true,
-		description: 'Tempo em milissegundos que a presença ficará ativa',
+		description: 'Time in milliseconds to keep presence active',
 		displayOptions: {
 			show: {
 				resource: ['chat-api'],
@@ -393,12 +393,12 @@ export const chatFields: INodeProperties[] = [
 
 	// Campos para bloquear contato
 	{
-		displayName: 'Contato',
+		displayName: 'Contact',
 		name: 'remoteJid',
 		type: 'string' as NodePropertyTypes,
 		default: '',
 		required: true,
-		description: 'Número do contato',
+		description: 'Contact number',
 		displayOptions: {
 			show: {
 				resource: ['chat-api'],
@@ -407,22 +407,22 @@ export const chatFields: INodeProperties[] = [
 		},
 	},
 	{
-		displayName: 'Ação',
+		displayName: 'Action',
 		name: 'status',
 		type: 'options',
 		options: [
 			{
-				name: 'Bloquear',
+				name: 'Block',
 				value: 'block',
 			},
 			{
-				name: 'Desbloquear',
+				name: 'Unblock',
 				value: 'unblock',
 			},
 		],
 		default: 'block',
 		required: true,
-		description: 'Ação a ser executada',
+		description: 'Choose whether to block or unblock the contact',
 		displayOptions: {
 			show: {
 				resource: ['chat-api'],
@@ -433,12 +433,12 @@ export const chatFields: INodeProperties[] = [
 
 	// Campos para listar contatos
 	{
-		displayName: 'Listar Todos',
+		displayName: 'List All',
 		name: 'listAll',
 		type: 'boolean' as NodePropertyTypes,
 		default: true,
 		required: true,
-		description: 'Se deve listar todos os contatos',
+		description: 'Whether to list all contacts',
 		displayOptions: {
 			show: {
 				resource: ['chat-api'],
@@ -447,12 +447,12 @@ export const chatFields: INodeProperties[] = [
 		},
 	},
 	{
-		displayName: 'Contato',
+		displayName: 'Contact',
 		name: 'remoteJid',
 		type: 'string' as NodePropertyTypes,
 		default: '',
 		required: true,
-		description: 'Número do contato específico',
+		description: 'Specific contact number',
 		displayOptions: {
 			show: {
 				resource: ['chat-api'],
@@ -464,12 +464,12 @@ export const chatFields: INodeProperties[] = [
 
 	// Campos para procurar mensagens
 	{
-		displayName: 'Contato',
+		displayName: 'Contact',
 		name: 'remoteJid',
 		type: 'string' as NodePropertyTypes,
 		default: '',
 		required: true,
-		description: 'Número do contato',
+		description: 'Contact number',
 		displayOptions: {
 			show: {
 				resource: ['chat-api'],
@@ -478,12 +478,12 @@ export const chatFields: INodeProperties[] = [
 		},
 	},
 	{
-		displayName: 'Página',
+		displayName: 'Page',
 		name: 'page',
 		type: 'number' as NodePropertyTypes,
 		default: 1,
 
-		description: 'Número da página',
+		description: 'Page number',
 		displayOptions: {
 			show: {
 				resource: ['chat-api'],
@@ -492,12 +492,12 @@ export const chatFields: INodeProperties[] = [
 		},
 	},
 	{
-		displayName: 'Quantidade Por Página',
+		displayName: 'Items Per Page',
 		name: 'offset',
 		type: 'number' as NodePropertyTypes,
 		default: 10,
 
-		description: 'Quantidade de mensagens por página',
+		description: 'Messages per page',
 		displayOptions: {
 			show: {
 				resource: ['chat-api'],
@@ -508,12 +508,12 @@ export const chatFields: INodeProperties[] = [
 
 	// Campos para procurar status de mensagens
 	{
-		displayName: 'Contato',
+		displayName: 'Contact',
 		name: 'remoteJid',
 		type: 'string' as NodePropertyTypes,
 		default: '',
 		required: true,
-		description: 'Número do contato',
+		description: 'Contact number',
 		displayOptions: {
 			show: {
 				resource: ['chat-api'],
@@ -522,7 +522,7 @@ export const chatFields: INodeProperties[] = [
 		},
 	},
 	{
-		displayName: 'ID Da Mensagem',
+		displayName: 'Message ID',
 		name: 'messageId',
 		type: 'string' as NodePropertyTypes,
 		default: '',
@@ -536,12 +536,12 @@ export const chatFields: INodeProperties[] = [
 		},
 	},
 	{
-		displayName: 'Página',
+		displayName: 'Page',
 		name: 'page',
 		type: 'number' as NodePropertyTypes,
 		default: 1,
 
-		description: 'Número da página',
+		description: 'Page number',
 		displayOptions: {
 			show: {
 				resource: ['chat-api'],
@@ -550,12 +550,12 @@ export const chatFields: INodeProperties[] = [
 		},
 	},
 	{
-		displayName: 'Quantidade Por Página',
+		displayName: 'Items Per Page',
 		name: 'offset',
 		type: 'number' as NodePropertyTypes,
 		default: 10,
 
-		description: 'Quantidade de mensagens por página',
+		description: 'Messages per page',
 		displayOptions: {
 			show: {
 				resource: ['chat-api'],
@@ -566,12 +566,12 @@ export const chatFields: INodeProperties[] = [
 
 	// Campos para procurar chats
 	{
-		displayName: 'Contato',
+		displayName: 'Contact',
 		name: 'remoteJid',
 		type: 'string' as NodePropertyTypes,
 		default: '',
 		required: true,
-		description: 'Número do contato',
+		description: 'Contact number',
 		displayOptions: {
 			show: {
 				resource: ['chat-api'],
@@ -580,7 +580,7 @@ export const chatFields: INodeProperties[] = [
 		},
 	},
 	{
-		displayName: 'ID Da Mensagem',
+		displayName: 'Message ID',
 		name: 'messageId',
 		type: 'string' as NodePropertyTypes,
 		default: '',
@@ -594,12 +594,12 @@ export const chatFields: INodeProperties[] = [
 		},
 	},
 	{
-		displayName: 'Página',
+		displayName: 'Page',
 		name: 'page',
 		type: 'number' as NodePropertyTypes,
 		default: 1,
 
-		description: 'Número da página',
+		description: 'Page number',
 		displayOptions: {
 			show: {
 				resource: ['chat-api'],
@@ -608,12 +608,12 @@ export const chatFields: INodeProperties[] = [
 		},
 	},
 	{
-		displayName: 'Quantidade Por Página',
+		displayName: 'Items Per Page',
 		name: 'offset',
 		type: 'number' as NodePropertyTypes,
 		default: 10,
 
-		description: 'Quantidade de chats por página',
+		description: 'Chats per page',
 		displayOptions: {
 			show: {
 				resource: ['chat-api'],

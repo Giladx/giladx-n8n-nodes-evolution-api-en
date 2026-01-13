@@ -2,12 +2,12 @@ import { INodeProperties, NodePropertyTypes } from 'n8n-workflow';
 
 export const groupsFields: INodeProperties[] = [
 	{
-		displayName: 'Nome Da Instância',
+		displayName: 'Instance Name',
 		name: 'instanceName',
 		type: 'string' as NodePropertyTypes,
 		default: '',
 		required: true,
-		description: 'Digite o nome da instância que vai criar o grupo',
+		description: 'Enter the instance name',
 		displayOptions: {
 			show: {
 				resource: ['groups-api'],
@@ -16,12 +16,12 @@ export const groupsFields: INodeProperties[] = [
 		},
 	},
 	{
-		displayName: 'Nome Do Grupo',
+		displayName: 'Group Name',
 		name: 'subject',
 		type: 'string' as NodePropertyTypes,
 		default: '',
 		required: true,
-		description: 'Digite o nome do grupo que será criado',
+		description: 'Enter the group name to create',
 		displayOptions: {
 			show: {
 				resource: ['groups-api'],
@@ -30,12 +30,12 @@ export const groupsFields: INodeProperties[] = [
 		},
 	},
 	{
-		displayName: 'Descrição',
+		displayName: 'Description',
 		name: 'description',
 		type: 'string' as NodePropertyTypes,
 		default: '',
 
-		description: 'Digite a descrição do grupo (opcional)',
+		description: 'Group description (optional)',
 		displayOptions: {
 			show: {
 				resource: ['groups-api'],
@@ -44,12 +44,12 @@ export const groupsFields: INodeProperties[] = [
 		},
 	},
 	{
-		displayName: 'Participantes',
+		displayName: 'Participants',
 		name: 'participants',
 		type: 'string' as NodePropertyTypes,
 		default: '',
 		required: true,
-		description: 'Digite os números dos participantes separados por vírgula (ex: 5511999999999,5511888888888)',
+		description: 'Participant numbers, comma-separated (e.g., 5511999999999,5511888888888)',
 		displayOptions: {
 			show: {
 				resource: ['groups-api'],
@@ -58,12 +58,12 @@ export const groupsFields: INodeProperties[] = [
 		},
 	},
 	{
-		displayName: 'Nome Da Instância',
+		displayName: 'Instance Name',
 		name: 'instanceName',
 		type: 'string' as NodePropertyTypes,
 		default: '',
 		required: true,
-		description: 'Digite o nome da instância que vai atualizar a imagem',
+		description: 'Enter the instance name',
 		displayOptions: {
 			show: {
 				resource: ['groups-api'],
@@ -72,12 +72,12 @@ export const groupsFields: INodeProperties[] = [
 		},
 	},
 	{
-		displayName: 'ID Do Grupo',
+		displayName: 'Group ID',
 		name: 'groupJid',
 		type: 'string' as NodePropertyTypes,
 		default: '',
 		required: true,
-		description: 'ID do grupo que terá a imagem atualizada',
+		description: 'Group ID to update the picture',
 		displayOptions: {
 			show: {
 				resource: ['groups-api'],
@@ -86,12 +86,12 @@ export const groupsFields: INodeProperties[] = [
 		},
 	},
 	{
-		displayName: 'URL Da Imagem',
+		displayName: 'Image URL',
 		name: 'image',
 		type: 'string' as NodePropertyTypes,
 		default: '',
 		required: true,
-		description: 'URL da imagem que será definida como foto do grupo',
+		description: 'Image URL to set as the group picture',
 		displayOptions: {
 			show: {
 				resource: ['groups-api'],
@@ -100,12 +100,12 @@ export const groupsFields: INodeProperties[] = [
 		},
 	},
 	{
-		displayName: 'Nome Da Instância',
+		displayName: 'Instance Name',
 		name: 'instanceName',
 		type: 'string' as NodePropertyTypes,
 		default: '',
 		required: true,
-		description: 'Digite o nome da instância que vai atualizar o nome do grupo',
+		description: 'Enter the instance name',
 		displayOptions: {
 			show: {
 				resource: ['groups-api'],
@@ -114,12 +114,12 @@ export const groupsFields: INodeProperties[] = [
 		},
 	},
 	{
-		displayName: 'ID Do Grupo',
+		displayName: 'Group ID',
 		name: 'groupJid',
 		type: 'string' as NodePropertyTypes,
 		default: '',
 		required: true,
-		description: 'ID do grupo que terá o nome atualizado',
+		description: 'Group ID to update the name',
 		displayOptions: {
 			show: {
 				resource: ['groups-api'],
@@ -128,12 +128,12 @@ export const groupsFields: INodeProperties[] = [
 		},
 	},
 	{
-		displayName: 'Novo Nome Do Grupo',
+		displayName: 'New Group Name',
 		name: 'subject',
 		type: 'string' as NodePropertyTypes,
 		default: '',
 		required: true,
-		description: 'Novo nome que será definido para o grupo',
+		description: 'New name for the group',
 		displayOptions: {
 			show: {
 				resource: ['groups-api'],
@@ -142,12 +142,12 @@ export const groupsFields: INodeProperties[] = [
 		},
 	},
 	{
-		displayName: 'Nome Da Instância',
+		displayName: 'Instance Name',
 		name: 'instanceName',
 		type: 'string' as NodePropertyTypes,
 		default: '',
 		required: true,
-		description: 'Digite o nome da instância que vai atualizar a descrição',
+		description: 'Enter the instance name',
 		displayOptions: {
 			show: {
 				resource: ['groups-api'],
@@ -156,12 +156,12 @@ export const groupsFields: INodeProperties[] = [
 		},
 	},
 	{
-		displayName: 'ID Do Grupo',
+		displayName: 'Group ID',
 		name: 'groupJid',
 		type: 'string' as NodePropertyTypes,
 		default: '',
 		required: true,
-		description: 'ID do grupo que terá a descrição atualizada',
+		description: 'Group ID to update the description',
 		displayOptions: {
 			show: {
 				resource: ['groups-api'],
@@ -170,12 +170,12 @@ export const groupsFields: INodeProperties[] = [
 		},
 	},
 	{
-		displayName: 'Nova Descrição',
+		displayName: 'New Description',
 		name: 'description',
 		type: 'string' as NodePropertyTypes,
 		default: '',
 		required: true,
-		description: 'Nova descrição que será definida para o grupo',
+		description: 'New description for the group',
 		displayOptions: {
 			show: {
 				resource: ['groups-api'],
@@ -184,12 +184,12 @@ export const groupsFields: INodeProperties[] = [
 		},
 	},
 	{
-		displayName: 'Nome Da Instância',
+		displayName: 'Instance Name',
 		name: 'instanceName',
 		type: 'string' as NodePropertyTypes,
 		default: '',
 		required: true,
-		description: 'Digite o nome da instância que vai buscar o código',
+		description: 'Enter the instance name',
 		displayOptions: {
 			show: {
 				resource: ['groups-api'],
@@ -198,12 +198,12 @@ export const groupsFields: INodeProperties[] = [
 		},
 	},
 	{
-		displayName: 'ID Do Grupo',
+		displayName: 'Group ID',
 		name: 'groupJid',
 		type: 'string' as NodePropertyTypes,
 		default: '',
 		required: true,
-		description: 'ID do grupo para obter o código de convite',
+		description: 'Group ID to get the invite code',
 		displayOptions: {
 			show: {
 				resource: ['groups-api'],
@@ -212,12 +212,12 @@ export const groupsFields: INodeProperties[] = [
 		},
 	},
 	{
-		displayName: 'Nome Da Instância',
+		displayName: 'Instance Name',
 		name: 'instanceName',
 		type: 'string' as NodePropertyTypes,
 		default: '',
 		required: true,
-		description: 'Digite o nome da instância que vai revogar o código',
+		description: 'Enter the instance name',
 		displayOptions: {
 			show: {
 				resource: ['groups-api'],
@@ -226,12 +226,12 @@ export const groupsFields: INodeProperties[] = [
 		},
 	},
 	{
-		displayName: 'ID Do Grupo',
+		displayName: 'Group ID',
 		name: 'groupJid',
 		type: 'string' as NodePropertyTypes,
 		default: '',
 		required: true,
-		description: 'ID do grupo para revogar o código de convite',
+		description: 'Group ID to revoke the invite code',
 		displayOptions: {
 			show: {
 				resource: ['groups-api'],
@@ -240,12 +240,12 @@ export const groupsFields: INodeProperties[] = [
 		},
 	},
 	{
-		displayName: 'Nome Da Instância',
+		displayName: 'Instance Name',
 		name: 'instanceName',
 		type: 'string' as NodePropertyTypes,
 		default: '',
 		required: true,
-		description: 'Digite o nome da instância que vai enviar o convite',
+		description: 'Enter the instance name',
 		displayOptions: {
 			show: {
 				resource: ['groups-api'],
@@ -254,12 +254,12 @@ export const groupsFields: INodeProperties[] = [
 		},
 	},
 	{
-		displayName: 'ID Do Grupo',
+		displayName: 'Group ID',
 		name: 'groupJid',
 		type: 'string' as NodePropertyTypes,
 		default: '',
 		required: true,
-		description: 'ID do grupo para enviar o convite',
+		description: 'Group ID to send the invite link',
 		displayOptions: {
 			show: {
 				resource: ['groups-api'],
@@ -268,12 +268,12 @@ export const groupsFields: INodeProperties[] = [
 		},
 	},
 	{
-		displayName: 'Mensagem Do Convite',
+		displayName: 'Invite Message',
 		name: 'description',
 		type: 'string' as NodePropertyTypes,
-		default: 'Segue o link do grupo',
+		default: 'Here is the group link',
 		required: true,
-		description: 'Mensagem que será enviada junto com o link do convite',
+		description: 'Message to send with the invite link',
 		displayOptions: {
 			show: {
 				resource: ['groups-api'],
@@ -282,12 +282,12 @@ export const groupsFields: INodeProperties[] = [
 		},
 	},
 	{
-		displayName: 'Destinatários',
+		displayName: 'Recipients',
 		name: 'numbers',
 		type: 'string' as NodePropertyTypes,
 		default: '',
 		required: true,
-		description: 'Digite os números dos destinatários separados por vírgula (ex: 5511999999999,5511888888888)',
+		description: 'Recipient numbers, comma-separated (e.g., 5511999999999,5511888888888)',
 		displayOptions: {
 			show: {
 				resource: ['groups-api'],
@@ -296,12 +296,12 @@ export const groupsFields: INodeProperties[] = [
 		},
 	},
 	{
-		displayName: 'Nome Da Instância',
+		displayName: 'Instance Name',
 		name: 'instanceName',
 		type: 'string' as NodePropertyTypes,
 		default: '',
 		required: true,
-		description: 'Digite o nome da instância que vai buscar o grupo',
+		description: 'Enter the instance name',
 		displayOptions: {
 			show: {
 				resource: ['groups-api'],
@@ -310,12 +310,12 @@ export const groupsFields: INodeProperties[] = [
 		},
 	},
 	{
-		displayName: 'Código Do Convite',
+		displayName: 'Invite Code',
 		name: 'inviteCode',
 		type: 'string' as NodePropertyTypes,
 		default: '',
 		required: true,
-		description: 'Código do convite do grupo (ex: JZNHJLvnNd04UvGefiEZAA)',
+		description: 'Group invite code (e.g., JZNHJLvnNd04UvGefiEZAA)',
 		displayOptions: {
 			show: {
 				resource: ['groups-api'],
@@ -324,12 +324,12 @@ export const groupsFields: INodeProperties[] = [
 		},
 	},
 	{
-		displayName: 'Nome Da Instância',
+		displayName: 'Instance Name',
 		name: 'instanceName',
 		type: 'string' as NodePropertyTypes,
 		default: '',
 		required: true,
-		description: 'Digite o nome da instância',
+		description: 'Enter the instance name',
 		displayOptions: {
 			show: {
 				resource: ['groups-api'],
@@ -338,26 +338,26 @@ export const groupsFields: INodeProperties[] = [
 		},
 	},
 	{
-		displayName: 'Método De Busca',
+		displayName: 'Search Method',
 		name: 'searchMethod',
 		type: 'options' as NodePropertyTypes,
 		options: [
 			{
-				name: 'Por Código De Convite',
+				name: 'By Invite Code',
 				value: 'inviteCode',
 			},
 			{
-				name: 'Por ID Do Grupo',
+				name: 'By Group ID',
 				value: 'groupJid',
 			},
 			{
-				name: 'Buscar Todos Os Grupos',
+				name: 'Fetch All Groups',
 				value: 'fetchAll',
 			},
 		],
 		default: 'inviteCode',
 		required: true,
-		description: 'Escolha o método para buscar os grupos',
+		description: 'Choose how to search for groups',
 		displayOptions: {
 			show: {
 				resource: ['groups-api'],
@@ -366,12 +366,12 @@ export const groupsFields: INodeProperties[] = [
 		},
 	},
 	{
-		displayName: 'Código Do Convite',
+		displayName: 'Invite Code',
 		name: 'inviteCode',
 		type: 'string' as NodePropertyTypes,
 		default: '',
 		required: true,
-		description: 'Código do convite do grupo (ex: JZNHJLvnNd04UvGefiEZAA)',
+		description: 'Group invite code (e.g., JZNHJLvnNd04UvGefiEZAA)',
 		displayOptions: {
 			show: {
 				resource: ['groups-api'],
@@ -381,12 +381,12 @@ export const groupsFields: INodeProperties[] = [
 		},
 	},
 	{
-		displayName: 'ID Do Grupo',
+		displayName: 'Group ID',
 		name: 'groupJid',
 		type: 'string' as NodePropertyTypes,
 		default: '',
 		required: true,
-		description: 'ID do grupo para buscar informações',
+		description: 'Group ID to fetch info',
 		displayOptions: {
 			show: {
 				resource: ['groups-api'],
@@ -396,12 +396,12 @@ export const groupsFields: INodeProperties[] = [
 		},
 	},
 	{
-		displayName: 'Obter Participantes',
+		displayName: 'Get Participants',
 		name: 'getParticipants',
 		type: 'boolean' as NodePropertyTypes,
 		default: false,
 
-		description: 'Se deve obter a lista de participantes dos grupos',
+		description: 'Whether to include the participant list',
 		displayOptions: {
 			show: {
 				resource: ['groups-api'],
@@ -411,12 +411,12 @@ export const groupsFields: INodeProperties[] = [
 		},
 	},
 	{
-		displayName: 'Nome Da Instância',
+		displayName: 'Instance Name',
 		name: 'instanceName',
 		type: 'string' as NodePropertyTypes,
 		default: '',
 		required: true,
-		description: 'Digite o nome da instância',
+		description: 'Enter the instance name',
 		displayOptions: {
 			show: {
 				resource: ['groups-api'],
@@ -425,12 +425,12 @@ export const groupsFields: INodeProperties[] = [
 		},
 	},
 	{
-		displayName: 'ID Do Grupo',
+		displayName: 'Group ID',
 		name: 'groupJid',
 		type: 'string' as NodePropertyTypes,
 		default: '',
 		required: true,
-		description: 'ID do grupo para buscar os participantes',
+		description: 'Group ID to fetch participants',
 		displayOptions: {
 			show: {
 				resource: ['groups-api'],
@@ -439,12 +439,12 @@ export const groupsFields: INodeProperties[] = [
 		},
 	},
 	{
-		displayName: 'Nome Da Instância',
+		displayName: 'Instance Name',
 		name: 'instanceName',
 		type: 'string' as NodePropertyTypes,
 		default: '',
 		required: true,
-		description: 'Digite o nome da instância',
+		description: 'Enter the instance name',
 		displayOptions: {
 			show: {
 				resource: ['groups-api'],
@@ -453,12 +453,12 @@ export const groupsFields: INodeProperties[] = [
 		},
 	},
 	{
-		displayName: 'ID Do Grupo',
+		displayName: 'Group ID',
 		name: 'groupJid',
 		type: 'string' as NodePropertyTypes,
 		default: '',
 		required: true,
-		description: 'ID do grupo para atualizar os membros',
+		description: 'Group ID to update members',
 		displayOptions: {
 			show: {
 				resource: ['groups-api'],
@@ -467,30 +467,30 @@ export const groupsFields: INodeProperties[] = [
 		},
 	},
 	{
-		displayName: 'Ação',
+		displayName: 'Action',
 		name: 'action',
 		type: 'options' as NodePropertyTypes,
 		options: [
 			{
-				name: 'Adicionar Membro',
+				name: 'Add Member',
 				value: 'add',
 			},
 			{
-				name: 'Remover Membro',
+				name: 'Remove Member',
 				value: 'remove',
 			},
 			{
-				name: 'Promover a Administrador',
+				name: 'Promote to Admin',
 				value: 'promote',
 			},
 			{
-				name: 'Rebaixar Para Membro',
+				name: 'Demote to Member',
 				value: 'demote',
 			},
 		],
 		default: 'add',
 		required: true,
-		description: 'Ação a ser executada com os membros',
+		description: 'Action to apply to members',
 		displayOptions: {
 			show: {
 				resource: ['groups-api'],
@@ -499,12 +499,12 @@ export const groupsFields: INodeProperties[] = [
 		},
 	},
 	{
-		displayName: 'Membros',
+		displayName: 'Members',
 		name: 'participants',
 		type: 'string' as NodePropertyTypes,
 		default: '',
 		required: true,
-		description: 'Lista de números dos membros separados por vírgula (ex: 5511999999999,5511888888888)',
+		description: 'Member numbers, comma-separated (e.g., 5511999999999,5511888888888)',
 		displayOptions: {
 			show: {
 				resource: ['groups-api'],
@@ -513,12 +513,12 @@ export const groupsFields: INodeProperties[] = [
 		},
 	},
 	{
-		displayName: 'Nome Da Instância',
+		displayName: 'Instance Name',
 		name: 'instanceName',
 		type: 'string' as NodePropertyTypes,
 		default: '',
 		required: true,
-		description: 'Digite o nome da instância',
+		description: 'Enter the instance name',
 		displayOptions: {
 			show: {
 				resource: ['groups-api'],
@@ -527,12 +527,12 @@ export const groupsFields: INodeProperties[] = [
 		},
 	},
 	{
-		displayName: 'ID Do Grupo',
+		displayName: 'Group ID',
 		name: 'groupJid',
 		type: 'string' as NodePropertyTypes,
 		default: '',
 		required: true,
-		description: 'ID do grupo para atualizar as configurações',
+		description: 'Group ID to update settings',
 		displayOptions: {
 			show: {
 				resource: ['groups-api'],
@@ -541,30 +541,30 @@ export const groupsFields: INodeProperties[] = [
 		},
 	},
 	{
-		displayName: 'Ação',
+		displayName: 'Action',
 		name: 'action',
 		type: 'options' as NodePropertyTypes,
 		options: [
 			{
-				name: 'Somente Admins Enviam Mensagens',
+				name: 'Only Admins Send Messages',
 				value: 'announcement',
 			},
 			{
-				name: 'Todos Enviam Mensagens',
+				name: 'Everyone Can Send Messages',
 				value: 'not_announcement',
 			},
 			{
-				name: 'Somente Admins Editam Configurações',
+				name: 'Only Admins Can Edit Settings',
 				value: 'locked',
 			},
 			{
-				name: 'Todos Editam Configurações',
+				name: 'Everyone Can Edit Settings',
 				value: 'unlocked',
 			},
 		],
 		default: 'not_announcement',
 		required: true,
-		description: 'Configuração a ser aplicada no grupo',
+		description: 'Group setting to apply',
 		displayOptions: {
 			show: {
 				resource: ['groups-api'],
@@ -573,12 +573,12 @@ export const groupsFields: INodeProperties[] = [
 		},
 	},
 	{
-		displayName: 'Nome Da Instância',
+		displayName: 'Instance Name',
 		name: 'instanceName',
 		type: 'string' as NodePropertyTypes,
 		default: '',
 		required: true,
-		description: 'Digite o nome da instância',
+		description: 'Enter the instance name',
 		displayOptions: {
 			show: {
 				resource: ['groups-api'],
@@ -587,12 +587,12 @@ export const groupsFields: INodeProperties[] = [
 		},
 	},
 	{
-		displayName: 'ID Do Grupo',
+		displayName: 'Group ID',
 		name: 'groupJid',
 		type: 'string' as NodePropertyTypes,
 		default: '',
 		required: true,
-		description: 'ID do grupo para configurar mensagens temporárias',
+		description: 'Group ID for disappearing messages',
 		displayOptions: {
 			show: {
 				resource: ['groups-api'],
@@ -601,30 +601,30 @@ export const groupsFields: INodeProperties[] = [
 		},
 	},
 	{
-		displayName: 'Expiração',
+		displayName: 'Expiration',
 		name: 'expiration',
 		type: 'options' as NodePropertyTypes,
 		options: [
 			{
-				name: 'Desativado',
+				name: 'Disabled',
 				value: 0,
 			},
 			{
-				name: '24 Horas',
+				name: '24 Hours',
 				value: 86400,
 			},
 			{
-				name: '7 Dias',
+				name: '7 Days',
 				value: 604800,
 			},
 			{
-				name: '90 Dias',
+				name: '90 Days',
 				value: 7776000,
 			},
 		],
 		default: 0,
 		required: true,
-		description: 'Tempo de expiração das mensagens',
+		description: 'Message expiration time',
 		displayOptions: {
 			show: {
 				resource: ['groups-api'],
@@ -633,12 +633,12 @@ export const groupsFields: INodeProperties[] = [
 		},
 	},
 	{
-		displayName: 'Nome Da Instância',
+		displayName: 'Instance Name',
 		name: 'instanceName',
 		type: 'string' as NodePropertyTypes,
 		default: '',
 		required: true,
-		description: 'Digite o nome da instância',
+		description: 'Enter the instance name',
 		displayOptions: {
 			show: {
 				resource: ['groups-api'],
@@ -647,12 +647,12 @@ export const groupsFields: INodeProperties[] = [
 		},
 	},
 	{
-		displayName: 'ID Do Grupo',
+		displayName: 'Group ID',
 		name: 'groupJid',
 		type: 'string' as NodePropertyTypes,
 		default: '',
 		required: true,
-		description: 'ID do grupo que deseja sair',
+		description: 'Group ID to leave',
 		displayOptions: {
 			show: {
 				resource: ['groups-api'],
@@ -661,12 +661,12 @@ export const groupsFields: INodeProperties[] = [
 		},
 	},
 	{
-		displayName: 'Nome Da Instância',
+		displayName: 'Instance Name',
 		name: 'instanceName',
 		type: 'string' as NodePropertyTypes,
 		default: '',
 		required: true,
-		description: 'Digite o nome da instância que vai entrar no grupo',
+		description: 'Enter the instance name',
 		displayOptions: {
 			show: {
 				resource: ['groups-api'],
@@ -675,12 +675,12 @@ export const groupsFields: INodeProperties[] = [
 		},
 	},
 	{
-		displayName: 'Código Do Convite',
+		displayName: 'Invite Code',
 		name: 'inviteCode',
 		type: 'string' as NodePropertyTypes,
 		default: '',
 		required: true,
-		description: 'Digite o código do convite do grupo (ex: JZNHJLvnNd04UvGefiEZAA)',
+		description: 'Group invite code (e.g., JZNHJLvnNd04UvGefiEZAA)',
 		displayOptions: {
 			show: {
 				resource: ['groups-api'],

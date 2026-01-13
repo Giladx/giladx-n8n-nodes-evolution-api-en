@@ -2,7 +2,7 @@ import { INodeProperties } from 'n8n-workflow';
 
 // Opções da events-api (Eventos)
 export const eventsOperationsOptions: INodeProperties = {
-	displayName: 'Operação',
+	displayName: 'Operation',
 	name: 'operation',
 	type: 'options',
 	noDataExpression: true,
@@ -17,14 +17,14 @@ export const eventsOperationsOptions: INodeProperties = {
 			// Set/find Webhook
 			name: 'Webhook',
 			action: 'Webhook',
-			description: 'Define/Busca integração com Webhook',
+			description: 'Set or check Webhook integration',
 			value: 'webhook',
 		},
 		{
 			// Set/find Rabbitmq
 			name: 'RabbitMQ',
 			action: 'Rabbitmq',
-			description: 'Define/Busca integração com RabbitMQ',
+			description: 'Set or check RabbitMQ integration',
 			value: 'rabbitmq',
 		},
 	],

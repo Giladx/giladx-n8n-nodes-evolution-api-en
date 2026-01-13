@@ -11,22 +11,22 @@ export class EvolutionApi implements ICredentialType {
 	documentationUrl = 'https://doc.evolution-api.com/pt';
 	properties: INodeProperties[] = [
 		{
-			displayName: 'Server Url',
+			displayName: 'Server URL',
 			name: 'server-url',
 			type: 'string',
 			default: '',
-			placeholder: 'https://exemplo.com',
-			description: 'Digite a URL completa da sua Evolution API (ex: https://api.exemplo.com)',
+			placeholder: 'https://example.com',
+			description: 'Enter the full URL for your Evolution API (e.g., https://api.example.com)',
 		},
 		{
-			displayName: 'ApiKey',
+			displayName: 'API Key',
 			name: 'apikey',
 			type: 'string',
 			default: '',
 			typeOptions: {
 				password: true,
 			},
-			description: 'Digite a ApiKey da Instancia ou Global da sua Evolution API',
+			description: 'Enter the instance or global API key for your Evolution API',
 		},
 	];
 
