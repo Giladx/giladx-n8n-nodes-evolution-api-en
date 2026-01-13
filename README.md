@@ -29,6 +29,18 @@ Para utilizar o nosso **Community Node**, é necessário atender aos seguintes r
 
 <h1></h1>
 
+<h3>📦 Instalação</h3>
+
+Instale este fork com o pacote publicado no npm:
+
+```bash
+npm install @giladx/n8n-nodes-evolution-api-en
+# ou
+pnpm add @giladx/n8n-nodes-evolution-api-en
+```
+
+<h1></h1>
+
 <h3>📌 Recursos Disponíveis</h3>
 
 <h3>Instância</h3>
