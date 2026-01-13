@@ -1,6 +1,6 @@
 ![image](https://github.com/user-attachments/assets/813b7b34-377c-42e8-9f1a-12e27e682c7f)
 
-<p align="center"><strong>English fork</strong> of the original community node. Upstream: <a href="https://github.com/oriondesign2015/n8n-nodes-evolution-api">oriondesign2015/n8n-nodes-evolution-api</a></p>
+<p align="center"><strong>Fork and English translation</strong> of the original community node. Upstream: <a href="https://github.com/oriondesign2015/n8n-nodes-evolution-api">oriondesign2015/n8n-nodes-evolution-api</a> · npm: <a href="https://www.npmjs.com/package/n8n-nodes-evolution-api">n8n-nodes-evolution-api</a></p>
 
 <p align="center"><br>
 Este Community Nodes é uma solução 100% gratuita, criada com o intuito de simplificar e auxiliar toda a comunidade a integrar e utilizar ao máximo os principais recursos oferecidos pela <b>Evolution API v2.2+</b> em seus projetos no N8N. <b>Desenvolvido por OrionDesign.</b>
